@@ -18,8 +18,13 @@
 
 | Masalah yang ditemukan | Jumlah baris | Cara menangani |
 |---|---|---|
-| [misalnya baris duplikat] | [angka] | [misalnya dihapus dengan drop_duplicates] |
-
+| baris duplikat | 297 | dihapus dengan drop_duplicates |
+| penulisan nama tanaman yang tidak konsisten (Cabai, CABAI, cabe, Tomat, tomat, Selada, lettuce)  |---| penulisan nama disamakan berdasarkan jenisnya menggunakan strip, lower, dan replace |
+| data kosong pada suhu_udara_C | 528 |---|
+| Data kosong pada prakiraan_hujan_6jam_mm | 354 |---|
+| nilai yang mustahil pada kelembapan tanah | 106 |---|
+| sensor macet (nilai tidak berubah selama 47 jam) | 157 |---|
+| jam yang hilang | 3-16 jam per petak |---|
 ## Hasil
 
 | Model | [metrik utama] *validation* | [metrik utama] *test* |
@@ -33,18 +38,16 @@
 
 ```bash
 pip install -r requirements.txt
-uvicorn app.api.main:app --reload       # API
-streamlit run app/ui/streamlit_app.py   # aplikasi
+streamlit run app.py   # aplikasi
 ```
 
 ## Struktur repositori
 
 ```
-notebooks/      notebook dari EDA sampai penyimpanan model
-data/           data mentah (dan data bersih jika perlu)
-src/features.py fungsi pembuat fitur, dipakai saat pelatihan dan saat prediksi
-artifacts/      model.joblib + metadata.json
-app/            API (FastAPI) dan antarmuka (Streamlit)
+Kasus07_Irigasi_Pintar.ipynb   notebook dari EDA, pembersihan, pemodelan, sampai penyimpanan model
+app.py                         aplikasi web (Streamlit) yang memuat model dan memberi saran
+model_irigasi.joblib           model final (pipeline Gradient Boosting) + threshold, daftar fitur, dan aturan
+requirements.txt               daftar pustaka yang dibutuhkan
 ```
 
 ## Keterbatasan
