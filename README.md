@@ -29,8 +29,9 @@
 
 | Model | [metrik utama] *validation* | [metrik utama] *test* |
 |---|---|---|
-| *Baseline*: [nama *baseline*] | | |
-| [model final] | | |
+| *Baseline*: siram jika kelembapan tanah <35% | 0,346 | 0,306 |
+| Aturan buatan tangan (batas per tanaman + cek hujan) | 0,822 | 0,754 |
+| Gradient Boosting (model final) | 0,858 | 0,754 |
 
 *Threshold* yang dipakai: [angka], karena [alasan bisnis].
 
