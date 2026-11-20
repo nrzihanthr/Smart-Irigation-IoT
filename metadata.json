@@ -1,0 +1,73 @@
+{
+  "nama_model": "Gradient Boosting (HistGradientBoostingClassifier)",
+  "file_model": "model_irigasi.joblib",
+  "dibuat": "2026-11-20",
+  "versi": {
+    "python": "3.13.18",
+    "scikit_learn": "1.6.1",
+    "pandas": "2.2.3"
+  },
+  "target": "perlu_siram",
+  "fitur": [
+    "tanaman",
+    "jenis_tanah",
+    "umur_tanaman_hari",
+    "kelembaban_tanah_pct",
+    "suhu_udara_C",
+    "kelembaban_udara_pct",
+    "cahaya_lux",
+    "curah_hujan_mm",
+    "prakiraan_hujan_6jam_mm",
+    "turun_1j",
+    "turun_3j"
+  ],
+  "threshold": 0.45,
+  "aturan_alasan": {
+    "cabai": 32,
+    "tomat": 36,
+    "selada": 42,
+    "hujan": 2
+  },
+  "pembagian_data": {
+    "train": "1 Agustus – 30 September 2025",
+    "validation": "1 – 14 Oktober 2025",
+    "test": "15 – 31 Oktober 2025",
+    "catatan": "Hanya jam 05–17 (jam kerja agronom) dan pembacaan sensor yang normal"
+  },
+  "metrik": {
+    "validation": {
+      "baseline": {
+        "f1": 0.346,
+        "precision": 0.276,
+        "recall": 0.463
+      },
+      "aturan": {
+        "f1": 0.822,
+        "precision": 0.946,
+        "recall": 0.727
+      },
+      "model": {
+        "f1": 0.858,
+        "precision": 0.959,
+        "recall": 0.777
+      }
+    },
+    "test": {
+      "baseline": {
+        "f1": 0.306,
+        "precision": 0.267,
+        "recall": 0.357
+      },
+      "aturan": {
+        "f1": 0.754,
+        "precision": 0.927,
+        "recall": 0.636
+      },
+      "model": {
+        "f1": 0.754,
+        "precision": 0.927,
+        "recall": 0.636
+      }
+    }
+  }
+}
