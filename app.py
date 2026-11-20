@@ -153,10 +153,11 @@ with kanan:
             # Ringkasan angka
             m1, m2, m3 = st.columns(3)
             m1.metric("Kelembapan tanah", f"{s.k_now:.1f}%", f"{s.k_now - batas:+.1f} dari batas {batas}%",
-                      delta_color="off")
+                      delta_color="off", delta_arrow="off")
             m2.metric("Prakiraan hujan 6 jam", f"{s.prakiraan:.1f} mm", f"ditunda jika ≥ {ATURAN['hujan']} mm",
-                      delta_color="off")
-            m3.metric("Keyakinan model", f"{peluang:.0%}", f"siram jika ≥ {THRESHOLD:.0%}", delta_color="off")
+                      delta_color="off", delta_arrow="off")
+            m3.metric("Keyakinan model", f"{peluang:.0%}", f"siram jika ≥ {THRESHOLD:.0%}",
+                      delta_color="off", delta_arrow="off")
 
             # Alasan disusun dari pola keputusan agronom yang ditemukan di data latih
             alasan = []
