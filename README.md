@@ -5,7 +5,7 @@
 | Anggota | NIM | Bagian yang dikerjakan |
 |---|---|---|
 | Nurjihan Rizky Thahira | [NIM] | [misalnya model, evaluasi, dan aplikasi] |
-| [nama] | [NIM] | [misalnya EDA dan pembersihan data] |
+| Annisa Zulfa Maulidia | 2403520 | [misalnya EDA dan pembersihan data] |
 | [nama] | [NIM] | [misalnya laporan dan video] |
 
 ## Masalah dan pengguna
