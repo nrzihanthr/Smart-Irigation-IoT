@@ -4,9 +4,9 @@
 
 | Anggota | NIM | Bagian yang dikerjakan |
 |---|---|---|
-| Nurjihan Rizky Thahira | [NIM] | [misalnya model, evaluasi, dan aplikasi] |
-| Annisa Zulfa Maulidia | 2403520 | [misalnya EDA dan pembersihan data] |
-| [nama] | [NIM] | [misalnya laporan dan video] |
+| Nurjihan Rizky Thahira | 2407399 | Pemodelan dan evaluasi (pembagian data berdasarkan waktu, baseline, perbandingan Logistic Regression, Random Forest, dan Gradient Boosting, pemilihan threshold, evaluasi data test), aplikasi Streamlit, deploy, dan repositori GitHub |
+| Annisa Zulfa Maulidia | 2403520 | EDA dan pembersihan data (pemeriksaan duplikat, nama tanaman, data kosong, sensor rusak dan macet, temuan label malam dan label terlambat), pembuatan fitur, src/features.py, serta penyusunan laporan |
+
 
 ## Masalah dan pengguna
 
